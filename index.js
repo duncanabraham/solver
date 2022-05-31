@@ -1,18 +1,12 @@
-const { data, mazeSettings } = require('./config')
+const { mazeSettings } = require('./config')
 const Solver = require('./lib/solver')
 const Maze = require('./lib/maze')
 
-const thisSolver = new Solver()
-const thisMaze = new Maze({
-  width: 10,
-  height: 10,
-  maze: data
-})
+const thisMaze = new Maze(mazeSettings)
+thisMaze.show()
 
-const startPos = [5, 3]
-const endPos = [10,0]
-
-
-const route = thisSolver.solve(thisMaze, startPos, endPos)
-
+const thisSolver = new Solver(thisMaze)
+const route = thisSolver.solve()
 console.log(route)
+
+thisMaze.show(false)
