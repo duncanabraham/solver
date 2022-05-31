@@ -13,6 +13,8 @@ node index.js
 This should show a simple maze map followed by the solution to the maze.  It's not the most efficient (I know) but it does seem to give 
 me a what I need for now.
 
+The edges of the maze are implied by the dimensions, ie there must be a wall at maze.width as you can't go there.
+
 ```
 ░░░░░░░░░░░░░░
 ░     ░░     ░
