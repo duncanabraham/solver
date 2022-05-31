@@ -8,5 +8,3 @@ thisMaze.show()
 const thisSolver = new Solver(thisMaze)
 const route = thisSolver.solve()
 console.log(route)
-
-thisMaze.show(false)
